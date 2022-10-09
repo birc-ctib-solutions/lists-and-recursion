@@ -37,7 +37,6 @@ List = Optional[L[T]]  # A list is an L() constructor or None
 def length(x: List[T]) -> int:
     """
     Compute the length of x.
-
     >>> length(None)
     0
     >>> length(L(1, None))
@@ -51,7 +50,6 @@ def length(x: List[T]) -> int:
 def add(x: List[int]) -> int:
     """
     Compute the length of x.
-
     >>> add(None)
     0
     >>> add(L(1, None))
@@ -65,7 +63,6 @@ def add(x: List[int]) -> int:
 def contains(x: List[T], e: T) -> bool:
     """
     Tell us if e is in x.
-
     >>> contains(L(1, L(2, L(3, None))), 4)
     False
     >>> contains(L(1, L(2, L(3, None))), 2)
@@ -79,7 +76,6 @@ def contains(x: List[T], e: T) -> bool:
 def drop(x: List[T], k: int) -> List[T]:
     """
     Remove the first k elements.
-
     >>> x = L(1, L(2, L(3, L(4, None))))
     >>> drop(x, 0)
     L(1, L(2, L(3, L(4, None))))
@@ -97,7 +93,6 @@ def drop(x: List[T], k: int) -> List[T]:
 def keep(x: List[T], k: int) -> List[T]:
     """
     Keep only the first k elements.
-
     >>> x = L(1, L(2, L(3, L(4, None))))
     >>> keep(x, 0) # returns None but doesn't print
     >>> keep(x, 1)
@@ -114,7 +109,6 @@ def keep(x: List[T], k: int) -> List[T]:
 def concat(x: List[T], y: List[T]) -> List[T]:
     """
     Concatenate x and y.
-
     >>> concat(L(1, L(2, None)), L(3, L(4, None)))
     L(1, L(2, L(3, L(4, None))))
     """
@@ -124,7 +118,6 @@ def concat(x: List[T], y: List[T]) -> List[T]:
 def append(x: List[T], e: T) -> List[T]:
     """
     Append e to x.
-
     >>> append(L(1, L(2, None)), 3)
     L(1, L(2, L(3, None)))
     """
@@ -134,7 +127,6 @@ def append(x: List[T], e: T) -> List[T]:
 def rev(x: List[T]) -> List[T]:
     """
     Reverse a list.
-
     >>> rev(L(1, L(2, L(3, None))))
     L(3, L(2, L(1, None)))
     """
@@ -147,7 +139,6 @@ def rev(x: List[T]) -> List[T]:
 def length_tr(x: List[T], acc: int = 0) -> int:
     """
     Compute the length of x.
-
     >>> length_tr(None)
     0
     >>> length_tr(L(1, None))
@@ -161,7 +152,6 @@ def length_tr(x: List[T], acc: int = 0) -> int:
 def add_tr(x: List[int], acc: int = 0) -> int:
     """
     Compute the length of x.
-
     >>> add_tr(None)
     0
     >>> add_tr(L(1, None))
@@ -175,7 +165,6 @@ def add_tr(x: List[int], acc: int = 0) -> int:
 def contains_tr(x: List[T], e: T) -> bool:
     """
     Tell us if e is in x.
-
     >>> contains_tr(L(1, L(2, L(3, None))), 4)
     False
     >>> contains_tr(L(1, L(2, L(3, None))), 2)
@@ -189,7 +178,6 @@ def contains_tr(x: List[T], e: T) -> bool:
 def drop_tr(x: List[T], k: int) -> List[T]:
     """
     Remove the first k elements.
-
     >>> x = L(1, L(2, L(3, L(4, None))))
     >>> drop_tr(x, 0)
     L(1, L(2, L(3, L(4, None))))
@@ -207,7 +195,6 @@ def drop_tr(x: List[T], k: int) -> List[T]:
 def keep_tr(x: List[T], k: int, acc: List[T] = None) -> List[T]:
     """
     Keep only the first k elements.
-
     >>> x = L(1, L(2, L(3, L(4, None))))
     >>> keep_tr(x, 0) # returns None but doesn't print
     >>> keep_tr(x, 1)
@@ -224,7 +211,6 @@ def keep_tr(x: List[T], k: int, acc: List[T] = None) -> List[T]:
 def rev_prepend(x: List[T], y: List[T]) -> List[T]:  # Helper function
     """
     Reverse and prepend x to y.
-
     >>> rev_prepend(L(2, L(1, None)), L(3, L(4, None)))
     L(1, L(2, L(3, L(4, None))))
     """
@@ -234,7 +220,6 @@ def rev_prepend(x: List[T], y: List[T]) -> List[T]:  # Helper function
 def concat_tr(x: List[T], y: List[T], acc: List[T] = None) -> List[T]:
     """
     Concatenate x and y.
-
     >>> concat_tr(L(1, L(2, None)), L(3, L(4, None)))
     L(1, L(2, L(3, L(4, None))))
     """
@@ -245,7 +230,6 @@ def concat_tr(x: List[T], y: List[T], acc: List[T] = None) -> List[T]:
 def append_tr(x: List[T], e: T) -> List[T]:
     """
     Append e to x.
-
     >>> append_tr(L(1, L(2, None)), 3)
     L(1, L(2, L(3, None)))
     """
@@ -255,7 +239,6 @@ def append_tr(x: List[T], e: T) -> List[T]:
 def rev_tr(x: List[T]) -> List[T]:
     """
     Reverse a list.
-
     >>> rev_tr(L(1, L(2, L(3, None))))
     L(3, L(2, L(1, None)))
     """
@@ -267,7 +250,6 @@ def rev_tr(x: List[T]) -> List[T]:
 def length_loop(x: List[T]) -> int:
     """
     Compute the length of x.
-
     >>> length_loop(None)
     0
     >>> length_loop(L(1, None))
@@ -285,7 +267,6 @@ def length_loop(x: List[T]) -> int:
 def add_loop(x: List[int]) -> int:
     """
     Compute the length of x.
-
     >>> add_loop(None)
     0
     >>> add_loop(L(1, None))
@@ -303,7 +284,6 @@ def add_loop(x: List[int]) -> int:
 def contains_loop(x: List[T], e: T) -> bool:
     """
     Tell us if e is in x.
-
     >>> contains_loop(L(1, L(2, L(3, None))), 4)
     False
     >>> contains_loop(L(1, L(2, L(3, None))), 2)
@@ -319,7 +299,6 @@ def contains_loop(x: List[T], e: T) -> bool:
 def drop_loop(x: List[T], k: int) -> List[T]:
     """
     Remove the first k elements.
-
     >>> x = L(1, L(2, L(3, L(4, None))))
     >>> drop_loop(x, 0)
     L(1, L(2, L(3, L(4, None))))
@@ -337,7 +316,6 @@ def drop_loop(x: List[T], k: int) -> List[T]:
 def keep_loop(x: List[T], k: int) -> List[T]:
     """
     Keep only the first k elements.
-
     >>> x = L(1, L(2, L(3, L(4, None))))
     >>> keep_loop(x, 0) # returns None but doesn't print
     >>> keep_loop(x, 1)
@@ -356,7 +334,6 @@ def keep_loop(x: List[T], k: int) -> List[T]:
 def rev_prepend_loop(x: List[T], y: List[T]) -> List[T]:  # Helper function
     """
     Reverse and prepend x to y.
-
     >>> rev_prepend_loop(L(2, L(1, None)), L(3, L(4, None)))
     L(1, L(2, L(3, L(4, None))))
     """
@@ -369,7 +346,6 @@ def rev_prepend_loop(x: List[T], y: List[T]) -> List[T]:  # Helper function
 def concat_loop(x: List[T], y: List[T]) -> List[T]:
     """
     Concatenate x and y.
-
     >>> concat_loop(L(1, L(2, None)), L(3, L(4, None)))
     L(1, L(2, L(3, L(4, None))))
     """
@@ -381,7 +357,6 @@ def concat_loop(x: List[T], y: List[T]) -> List[T]:
 def append_loop(x: List[T], e: T) -> List[T]:
     """
     Append e to x.
-
     >>> append_loop(L(1, L(2, None)), 3)
     L(1, L(2, L(3, None)))
     """
@@ -391,7 +366,6 @@ def append_loop(x: List[T], e: T) -> List[T]:
 def rev_loop(x: List[T]) -> List[T]:
     """
     Reverse a list.
-
     >>> rev_loop(L(1, L(2, L(3, None))))
     L(3, L(2, L(1, None)))
     """

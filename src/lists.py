@@ -44,7 +44,7 @@ def length(x: List[T]) -> int:
     >>> length(L(1, L(2, L(3, None))))
     3
     """
-    return 0 if x is None else 1 + length(x.tail)
+    ...
 
 
 def add(x: List[int]) -> int:
@@ -57,7 +57,7 @@ def add(x: List[int]) -> int:
     >>> add(L(1, L(2, L(3, None))))
     6
     """
-    return 0 if x is None else x.head + add(x.tail)
+    ...
 
 
 def contains(x: List[T], e: T) -> bool:
